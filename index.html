@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/main.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Todo list</h1>
+        </header>
+        <main class="main">
+            <section class="new-todo">
+                <form id="new-todo-form" class="new-todo-form">
+                    <h2 class="section-title">New</h2>
+                    <label for="new-todo-title">Title: </label>
+                    <input
+                        type="text"
+                        name="todo-title"
+                        required
+                        id="new-todo-title"
+                        class="new-todo-title" />
+
+                    <label for="new-todo-details">Details: </label>
+                    <textarea
+                        name="todo-details"
+                        id="new-todo-details"
+                        class="new-todo-details"
+                        cols="30"
+                        rows="10"></textarea>
+                    <p>Priority:</p>
+                    <div class="form-group">
+                        <label for="new-todo-priority-1" class="new-todo-priority">
+                            1
+                            <input
+                                type="radio"
+                                name="new-todo-priority"
+                                id="new-todo-priority-1"
+                                data-new-todo-priority="1" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="new-todo-priority-2" class="new-todo-priority">
+                            2
+                            <input
+                                type="radio"
+                                name="new-todo-priority"
+                                id="new-todo-priority-2"
+                                data-new-todo-priority="2"
+                                checked />
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="new-todo-priority-3" class="new-todo-priority">
+                            3
+                            <input
+                                type="radio"
+                                name="new-todo-priority"
+                                id="new-todo-priority-3"
+                                data-new-todo-priority="3" />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <input
+                        type="submit"
+                        id="add-new-todo-btn"
+                        class="add-new-todo-btn"
+                        value="Add" />
+                </form>
+            </section>
+            <div class="main-grid-separator"></div>
+            <section class="todo-list">
+                <h2 class="section-title">List</h2>
+                <section id="todo-list-active" class="todo-list-active">
+                    <h4 class="todo-list-subtitle">Active</h4>
+                </section>
+                <section id="todo-list-done" class="todo-list-done">
+                    <h4 class="todo-list-subtitle">Done</h4>
+                </section>
+            </section>
+        </main>
+    </body>
+</html>
